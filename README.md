@@ -37,7 +37,7 @@
 Базовый URL - https://strahovkaa.ru/api1/
 
 
-### Создать ОСАГО 
+## Создать ОСАГО 
 URL – **osago/create**
 
 тип запроса – **POST**
@@ -203,9 +203,9 @@ URL – **osago/update**
 	{
 		"name": "Forbidden",
     	"message": "Сначала измените дату начала действия полиса",
-    		"code": 0,
-    		"status": 403,
-    		"type": "yii\\web\\ForbiddenHttpException"
+    	"code": 0,
+    	"status": 403,
+    	"type": "yii\\web\\ForbiddenHttpException"
 	}
 
 Ответ в случае успеха:
@@ -228,10 +228,10 @@ URL – **osago/send**
 
 	{
    		"name": "Forbidden",
-    		"message": "Сначала измените дату начала действия полиса",
-    		"code": 0,
-    		"status": 403,
-    		"type": "yii\\web\\ForbiddenHttpException"
+    	"message": "Сначала измените дату начала действия полиса",
+    	"code": 0,
+    	"status": 403,
+    	"type": "yii\\web\\ForbiddenHttpException"
 	}
 
 Ответ в случае успеха:
