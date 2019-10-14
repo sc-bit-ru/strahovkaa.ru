@@ -423,12 +423,12 @@ URL – **osago/stop**
 Ответ в случае успеха:
 
 	{
-    		"code": 0,
-    		"status": 200,
-    		"message": {
-        		"message": "OK"
-    		},
-    		"data": {
+    	"code": 0,
+    	"status": 200,
+    	"message": {
+        	"message": "OK"
+    	},
+    	"data": {
         		"id": "1011",
         		"status": 0,
         		"created_at": "2019-02-13 11:04:04",
