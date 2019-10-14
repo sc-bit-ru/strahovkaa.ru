@@ -1,4 +1,4 @@
-# Strahovkaa.ru
+# StrahovkaA.ru
 
 **strahovkaa.ru**  - это удобная платформа для страховых агентов, брокеров и частных лиц, которая позволяет:
 
@@ -619,5 +619,5 @@ URL – **osago/stop**
         		"soglasie_PayLink": "",
         		"zetta_QuotationISN": 0,
         		"zetta_paymentUrl": ""
-    		}
+    	}
 	}
