@@ -28,8 +28,6 @@
 
 * [Рассчитать ОСАГО](#osago-send)
 
-* [Создать ОСАГО](#osago-create)
-
 * [Сбросить расчёт ОСАГО](#osago-stop)
 
 Для начала работы с API необходимо получить секретный ключ для аутентификации, запросив его по адресу info@sc-bit.ru
@@ -39,7 +37,7 @@
 Базовый URL - https://strahovkaa.ru/api1/
 
 
-### Создать ОСАГО
+### Создать ОСАГО 
 URL – **osago/create**
 
 тип запроса – **POST**
@@ -188,3 +186,222 @@ URL – **osago/create**
 
 ### Редактировать ОСАГО
 
+URL – **osago/update**
+
+тип запроса – **POST**
+
+параметры:
+
+	access-token – секретный ключ
+	id – ид полиса
+	остальные параметры аналогичны запросу создания полиса
+	
+Пример ответа с ошибкой:
+
+	{
+		"name": "Forbidden",
+    		"message": "Сначала измените дату начала действия полиса",
+    		"code": 0,
+    		"status": 403,
+    		"type": "yii\\web\\ForbiddenHttpException"
+	}
+
+Ответ в случае успеха:
+
+	Аналогичен с созданием полиса
+
+
+### Рассчитать ОСАГО 
+
+URL – **osago/send**
+
+тип запроса – **GET**
+
+параметры:
+
+	access-token – секретный ключ
+	id – ид полиса
+	
+Пример ответа с ошибкой:
+
+	{
+   		"name": "Forbidden",
+    		"message": "Сначала измените дату начала действия полиса",
+    		"code": 0,
+    		"status": 403,
+    		"type": "yii\\web\\ForbiddenHttpException"
+	}
+
+Ответ в случае успеха:
+
+	{
+		"code":0,
+		"status":200,
+		"message":{
+			"message":"OK"
+		},
+		"data":{
+			"id":"6829",
+			"status":0,
+			"created_at":"2019-07-10 17:47:45",
+			"updated_at":"2019-07-10 17:47:45",
+			"owner":"613",
+			"vehicle_auto_mark_name":"NISSAN",
+			"vehicle_auto_mark_id":157,
+			"vehicle_auto_model_name":"PATHFINDER",
+			"vehicle_auto_model_id":955,
+			"vehicle_manufactured_year":"2001",
+			"insured_last_name":"ЧЕЧЕЛЬ",
+			"insured_first_name":"НИКОЛАЙ",
+			"insured_middle_name":"ИВАНОВИЧ",
+			"mobile":"9130887400",
+			"client_payment_state":0,
+			"vehicle_power":86,
+			"vehicle_identification_type":"body",
+			"vehicle_identification_number":"JN8Y",
+			"vehicle_registration_number":"К157ОЕ",
+			"vehicle_registration_region":"22",
+			"vehicle_document_type":"sertificate",
+			"vehicle_document_serie":"4424",
+			"vehicle_document_number":"586548",
+			"vehicle_document_date":"2018-07-05",
+			"vehicle_diagnostic_number":"070420021901679",
+			"vehicle_diagnostic_expiry":"2020-04-26",
+			"driver_1_last_name":"",
+			"driver_1_first_name":"",
+			"driver_1_middle_name":"",
+			"driver_1_birthday":null,
+			"driver_1_license_serie":"",
+			"driver_1_license_number":"",
+			"driver_1_experience_date":null,
+			"insured_birthday":"1990-07-10",
+			"insured_passport_serie":"3413",
+			"insured_passport_number":"582691",
+			"insured_passport_date":"2005-07-10",
+			"insured_address_region_name":"Алтайский край ",
+			"insured_address_city_name":"Барнаул г ",
+			"insured_address_street_name":"Степная 1-я ул",
+			"insured_address_home":"1",
+			"insured_address_build":"",
+			"insured_address_flat":"",
+			"last_error":"",
+			"email":"test@ya.ru",
+			"insured_address_region_code":"2200000000000",
+			"insured_address_city_code":"2200000100000",
+			"insured_address_street_code":"",
+			"owner_last_name":"ЧЕЧЕЛЬ",
+			"owner_first_name":"НИКОЛАЙ",
+			"owner_middle_name":"ИВАНОВИЧ",
+			"owner_birthday":"1990-07-10",
+			"owner_passport_serie":"3413",
+			"owner_passport_number":"582691",
+			"owner_passport_date":"2005-07-10",
+			"owner_address_region_name":"Алтайский край ",
+			"owner_address_region_code":"2200000000000",
+			"owner_address_city_name":"Барнаул г ",
+			"owner_address_city_code":"2200000100000",
+			"owner_address_street_name":"Степная 1-я ул",
+			"owner_address_street_code":"",
+			"owner_address_home":"1",
+			"owner_address_build":"",
+			"owner_address_flat":"",
+			"policy_date":"2019-07-14",
+			"policy_form_id":0, 
+			"alpha_payment_link":"",
+			"alpha_policy_number":"",
+			"alpha_policy_cost":0, "ingos_model":0,
+			"ingos_make":0,
+			"ingos_AgrID":"",
+			"ingos_ISN":"0",
+			"ingos_BillISN":0,
+			"ingos_PayURL":"",
+			"ingos_status":1,
+			"ingos_last_error":"",
+			"ingos_PremiumSum":0,
+			"sib_make_id":0,
+			"sib_model_id":0,
+			"paid_date":"0000-00-00 00:00:00",
+			"alfa_status":2,
+			"alfa_make":"",
+			"alfa_model":"",
+			"alfa_contractId":"0",
+			"alfa_contractNumber":"0",
+			"alfa_contractPremium":0,
+			"alfa_last_error":"",
+			"alfa_formUrl":"",
+			"alfa_orderId":"",
+			"alfa_upid":"",
+			"egarant_id":"",
+			"ingos_modification":"",
+			"ingos_tb":0,
+			"ingos_kt":0,
+			"ingos_ks":0,
+			"ingos_kvs":0,
+			"ingos_kbm":0,
+			"ingos_km":0,
+			"ingos_kn":0,
+			"alfa_tb":0,
+			"alfa_kt":0,
+			"alfa_kbm":0,
+			"alfa_kvs":0,
+			"alfa_ks":0,
+			"alfa_kp":0,
+			"alfa_km":0,
+			"alfa_kn":0,
+			"alfa_ko":0,
+			"alfa_kpr":0,
+			"Period_DateBeg_1":"2019-07-14",
+			"Period_DateBeg_2":"0000-00-00",
+			"period":0,
+			"Period_DateEnd_1":"2020-07-13",
+			"ingos_ko":0,
+			"refer":"0",
+			"engine_type":"P",
+			"from_app":1,
+			"alfa_cross_contractId":"0",
+			"vehicle_trailer":0,
+			"sib_rgs_payment_link":"",
+			"sib_rgs_policy_number":"",
+			"sib_rgs_policy_cost":0,
+			"sib_rgs_status":0,
+			"zetta_status":0,
+			"zetta_Premium":0,
+			"zetta_ID":"",
+			"zetta_last_error":"",
+			"zetta_Mark":"",
+			"zetta_Model":"",
+			"zetta_owl":"0",
+			"soglasie_tariff":0,
+			"soglasie_ko":0,
+			"soglasie_kn":0,
+			"soglasie_km":0,
+			"soglasie_ks":0,
+			"soglasie_kvs":0,
+			"soglasie_kbm":0,
+			"soglasie_kt":0,
+			"soglasie_tb":0,
+			"soglasie_last_error":"",
+			"soglasie_pass":"",
+			"soglasie_sub_status":0,
+			"soglasie_request_token":"",
+			"soglasie_ID":"0",
+			"sib_rgs_last_error":"",
+			"sib_rgs_id":"0",
+			"sib_rgs_sub_status":0,
+			"inomarka":0,
+			"zetta_tb":0,
+			"zetta_kp":0,
+			"zetta_ko":0,
+			"zetta_kn":0,
+			"zetta_km":0,
+			"zetta_ks":0,
+			"zetta_kvs":0,
+			"zetta_kbm":0,
+			"zetta_kt":0,
+			"zetta_sub_status":0,
+			"zetta_insured_index":"",
+			"soglasie_PayLink":"",
+			"zetta_QuotationISN":0,
+			"zetta_paymentUrl":""
+		}
+	}
